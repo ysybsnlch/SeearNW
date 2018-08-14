@@ -1,0 +1,2 @@
+<import src="../book-grid/book-grid-tpl.wxml" />
+<template is="bookGridTpl" data="{{books}}" />

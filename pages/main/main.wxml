@@ -1,0 +1,26 @@
+<import src="book-list/book-list-tpl.wxml" />
+<import src="book-grid/book-grid-tpl.wxml" />
+
+<view class="search">
+  <icon type="search" class="search-img" size="13" color="#405f80"></icon>
+  <input type="text" placeholder="输入你喜爱的书籍" 
+  placeholder-class="placeholder" bindfocus="onBindFocus" value="{{inputValue}}"
+  bindconfirm="onBindConfirm"/>
+  <image wx:if="{{searchPanelShow}}" src="/images/icon/wx_app_xx.png" class="xx-img" catchtap="onCancelImgTap"></image>
+</view>
+
+<view class="container" wx:if="{{containerShow}}">
+  <view class="books-template">
+    <template is="bookListTpl" data="{{...popular}}" />
+  </view>
+  <view class="books-template">
+    <template is="bookListTpl" data="{{...newbooks}}" />
+  </view>
+  <view class="books-template">
+    <template is="bookListTpl" data="{{...wellsale}}"/>
+  </view>
+</view>
+
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <template is="bookGridTpl" data="{{...searchResult}}"/>
+</view>

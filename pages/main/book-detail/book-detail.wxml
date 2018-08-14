@@ -1,0 +1,53 @@
+<import src="../stars/stars-tpl.wxml" />
+<view class="container">
+  <image class="head-img" src="{{book.bookImg}}" mode="aspectFill" />
+  <view class="head-img-hover">
+    <text class="main-title">{{book.title}}</text>
+    <text class="sub-title">{{book.author + " · "+book.year}}</text>
+    <view class="like">
+      <text class="plain-font">
+        价格
+      </text>
+      <text class="highlight-font">
+        {{book.price}}
+      </text>
+      <text class="plain-font">
+        出版社
+      </text>
+      <text class="highlight-font">
+        {{book.publisher}}
+      </text>
+      
+    </view>
+  </view>
+  <image class="book-img" src="{{book.bookImg}}" data-src="{{book.bookImg}}" catchtap="viewbookPostImg"/>
+  <view class="summary">
+    <view class="original-title">
+      <text>{{book.originalTitle}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">评分</text>
+      <template is="starsTpl" data="{{stars:book.stars, score:book.score}}" />
+    </view>
+    <view class="flex-row">
+      <text class="mark">标签</text>
+      <text>{{book.generes}}</text>
+    </view>
+    <view class="flex-row">
+      <text class="mark">简介</text>
+      <text>{{book.summary}}</text>
+    </view>
+  </view>
+  <!-- <view class="hr"></view>
+   <view class="synopsis">
+    <text class="synopsis-font">章节目录</text>
+    <text class="summary-content">{{book.catalog}}</text>
+  </view> --> 
+  <view class="hr"></view>
+  <view class="summary">
+      <view class="flex-row">
+      <text class="mark">作者简介</text>
+      <text>{{book.author_intro}}</text>
+      </view>
+  </view>
+</view>
