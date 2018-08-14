@@ -1,0 +1,19 @@
+ <template name="breviewsItemTpl">
+ <view class="breviews-container">
+      <view class="breviews-author-date">
+        <image src="{{avatar}}" />
+        <text>{{date}}</text>
+      </view>
+      <text class="breviews-title">{{title}}</text>
+      <image class="breviews-image" src="{{breviewsImg}}" mode="aspectFill" />
+      <text class="breviews-content">{{content}}</text>
+      <view class="breviews-like">
+        <image src="/images/icon/wx_app_collect.png" />
+        <text>{{collectionNum}}</text>
+        <image src="/images/icon/wx_app_view.png"></image>
+        <text>{{readingNum}}</text>
+        <image src="/images/icon/wx_app_message.png"></image>
+        <text>{{commentNum}}</text>
+      </view>
+    </view>
+ </template>

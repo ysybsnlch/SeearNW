@@ -1,0 +1,30 @@
+<view class="container">
+  <image class="head-image" src="{{isPlayingMusic?breviews.music.coverImg:breviews.breviewsImg}}"></image>
+  <image catchtap="onMusicTap" class="music" src="{{isPlayingMusic?'/images/icon/wx_app_music_stop.png':'/images/icon/wx_app_music_start.png'}}">
+  </image>
+  <text class="title">{{breviews.title}}</text>
+  <view class="author-date">
+    <view class="author-box">
+      <image class="avatar" src="{{breviews.avatar}}"></image>
+      <text class="author">{{breviews.author}}</text>
+    </view>
+    <text class="date">{{breviews.dateTime}}</text>
+  </view>
+  <text class="detail">{{breviews.detail}}</text>
+</view>
+<view class="tool">
+  <view class="tool-item" catchtap="onUpTap" data-breviews-id="{{breviews.breviewsId}}">
+    <image animation="{{animationUp}}" wx:if="{{breviews.upStatus}}" src="/images/icon/wx_app_liked.png" />
+    <image animation="{{animationUp}}" wx:else src="/images/icon/wx_app_like.png" />
+    <text>{{breviews.upNum}}</text>
+  </view>
+  <view class="tool-item comment" catchtap="onCommentTap" data-breviews-id="{{breviews.breviewsId}}">
+    <image src="/images/icon/wx_app_message.png"></image>
+    <text>{{breviews.commentNum}}</text>
+  </view>
+  <view class="tool-item" catchtap="onCollectionTap" data-breviews-id="{{breviews.breviewsId}}">
+    <image wx:if="{{breviews.collectionStatus}}" src="/images/icon/wx_app_collected.png" />
+    <image wx:else src="/images/icon/wx_app_collect.png" />
+    <text>{{breviews.collectionNum}}</text>
+  </view>
+</view>
