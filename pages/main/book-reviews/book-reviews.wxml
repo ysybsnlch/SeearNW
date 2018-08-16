@@ -11,9 +11,9 @@
       <image src="/images/post/post-3@text.jpg" data-breviews-id='5' />
     </swiper-item>
   </swiper>
-  <block wx:for="{{postList}}" wx:for-item="item" wx:for-index="idx">
+  <block wx:for="{{breviewsList}}" wx:for-item="item" wx:for-index="idx">
     <view catchtap="onTapToDetail" data-breviews-id="{{item.breviewsId}}">
-      <template is="postItemTpl" data="{{...item}}" />
+      <template is="breviewsItemTpl" data="{{...item}}" />
     </view>
   </block>
 </view>

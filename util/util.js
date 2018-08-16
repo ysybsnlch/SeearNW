@@ -107,6 +107,26 @@ function convertToStarsArray(stars) {
   return array;
 }
 
+function convertToStarsArrayB(stars) {
+  var num = stars;
+  var array = [];
+  for (var i = 1; i <= 5; i++) {
+    if (i <= num) {
+      array.push(1);
+    }
+    else {
+      if ((i - num) === 0.5) {
+        array.push(0.5)
+      }
+      else {
+        array.push(0);
+      }
+    }
+  }
+  return array;
+}
+
+
 function http(url, callBack) {
   wx.request({
     url: url,

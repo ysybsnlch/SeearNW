@@ -44,7 +44,8 @@ Page({
             director: director,
             casts: util.convertToCastString(data.casts),
             castsInfo: util.convertToCastInfos(data.casts),
-            summary: data.summary
+            summary: data.summary,
+			id : data.id
         }
         this.setData({
           movie:movie
@@ -61,5 +62,13 @@ Page({
       current: src, 
       urls: [src] 
     })
+  },
+
+  onMreviewsTap: function(event){
+	  var id = event.currentTarget.dataset.id;
+	  wx.navigateTo({
+		  url: "../movie-reviews/movie-reviews?id="+ id
+	  })
   }
+  
 })

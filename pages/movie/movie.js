@@ -88,7 +88,7 @@ Page({
       url: "movie-detail/movie-detail?id=" + movieId
     })
   },
-
+  
   onBindFocus: function (event) {
     this.setData({
       containerShow: false,

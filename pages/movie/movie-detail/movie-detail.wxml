@@ -4,11 +4,11 @@
   <view class="head-img-hover">
     <text class="main-title">{{movie.title}}</text>
     <text class="sub-title">{{movie.country + " · "+movie.year}}</text>
-    <view class="like">
+    <view class="like" catchtap="onMreviewsTap">
       <text class="highlight-font">
         {{movie.wishCount}}
       </text>
-      <text class="plain-font">
+      <text class="plain-font" >
         人喜欢
       </text>
       <text class="highlight-font">
