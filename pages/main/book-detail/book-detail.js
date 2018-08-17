@@ -1,12 +1,12 @@
 var util = require('../../../util/util.js')
-
+var bookId=""
 var app = getApp();
 Page({
   data: {
     book: {}
   },
   onLoad: function (options) {
-    var bookId = options.id;
+    bookId = options.id;
     var url = app.globalData.doubanBase + 
       "/v2/book/" + bookId;
     
@@ -51,6 +51,12 @@ Page({
     wx.previewImage({
       current: src, 
       urls: [src] 
+    })
+  },
+
+  onBreviewsTap: function (event) {
+	wx.navigateTo({
+      url: "../book-reviews/book-reviews?id=" + bookId
     })
   }
 })

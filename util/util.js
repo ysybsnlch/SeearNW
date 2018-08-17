@@ -107,8 +107,8 @@ function convertToStarsArray(stars) {
   return array;
 }
 
-function convertToStarsArrayB(stars) {
-  var num = stars;
+function convertToStarsArrayB(value) {
+  var num = value;
   var array = [];
   for (var i = 1; i <= 5; i++) {
     if (i <= num) {
@@ -170,5 +170,6 @@ module.exports = {
   convertToStarsArray: convertToStarsArray,
   http: http,
   convertToCastString: convertToCastString,
-  convertToCastInfos: convertToCastInfos
+  convertToCastInfos: convertToCastInfos,
+  convertToStarsArrayB: convertToStarsArrayB
 }

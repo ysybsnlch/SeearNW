@@ -1,24 +1,22 @@
+ <template name="mreviewsItemTpl">
  <import src="../../stars/stars-tpl.wxml" />
- <template name="breviewsItemTpl">
- <view class="breviews-container">
-      <view class="breviews-author-date">
+ <view class="mreviews-container">
+      <view class="mreviews-author-date">
         <image src="{{avatar}}" />
 		<text>{{author}}</text>
         <text>{{time}}</text>
-
       </view>
-	   <view class="breviews-star">
+	   <view class="mreviews-star">
 		<template is="starsTpl" data="{{stars:stars}}" />
 	   </view>
-      <text class="breviews-title">{{title}}</text>
+      <text class="mreviews-title">{{title}}</text>
  
-      <text class="breviews-content" catchtap="onTapToDetail" id="{{id}}">{{summary}}</text>
-      <view class="breviews-like">
+      <text class="mreviews-content">{{summary}}</text>
+      <view class="mreviews-like">
         <image src="../../../images/post/wx_app_collect.png" />
         <text>{{useful_count}} 人觉得很赞</text>
         <image src="../../../images/post/wx_app_view.png"></image>
         <text>{{useless_count}} 踩</text>
-
       </view>
-    </view>
+  </view>
  </template>

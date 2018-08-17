@@ -1,6 +1,7 @@
 <view class="container">
     <image class="avatar" src="/images/avatar/avatar-1.png"></image>
-    <text class="motto">Hello, 佩奇</text>
+    <text class="motto">Hello,欢迎体验测试版</text>
+    <text class="motto">————鱼丸粗面</text>
     <view catchtap="onTapJump" class="journey-container">
         <button class="journey" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">开始</button>      
     </view>

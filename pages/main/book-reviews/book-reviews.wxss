@@ -1,4 +1,4 @@
-@import "post-item/post-item-tpl.wxss";
+@import "breviews-item/breviews-item-tpl.wxss";
 swiper{
      width:100%;
      height:600rpx;

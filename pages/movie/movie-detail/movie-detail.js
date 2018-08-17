@@ -1,12 +1,12 @@
 var util = require('../../../util/util.js')
-
+var movieId =""
 var app = getApp();
 Page({
   data: {
     movie: {}
   },
   onLoad: function (options) {
-    var movieId = options.id;
+     movieId = options.id;
     var url = app.globalData.doubanBase + 
       "/v2/movie/subject/" + movieId;
     
@@ -67,7 +67,7 @@ Page({
   onMreviewsTap: function(event){
 	  var id = event.currentTarget.dataset.id;
 	  wx.navigateTo({
-		  url: "../movie-reviews/movie-reviews?id="+ id
+		  url: "../movie-reviews/movie-reviews?id="+ movieId
 	  })
   }
   

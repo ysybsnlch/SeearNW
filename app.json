@@ -7,11 +7,11 @@
     "pages/movie/movie",
     "pages/movie/more-movie/more-movie",
     "pages/movie/movie-detail/movie-detail",
-	"pages/movie/movie-reviews/movie-reviews",
+  	"pages/movie/movie-reviews/movie-reviews",
     "pages/main/more-book/more-book",
-	"pages/main/main",
+	  "pages/main/main",
     "pages/main/book-detail/book-detail",
-	"pages/main/book-reviews/book-reviews",
+  	"pages/main/book-reviews/book-reviews",
     "pages/setting/setting",
     "pages/setting/device/device",
     "pages/setting/document/download/download",
@@ -21,8 +21,8 @@
     "pages/setting/open-api/tpl-message/tpl-message",
     "pages/setting/open-api/wx-pay/wx-pay",
     "pages/setting/others/wx-key/wx-key",
-    "pages/setting/others/scroll-view/scroll-view",
-    "pages/main/main"
+    "pages/setting/others/scroll-view/scroll-view"
+  
 	
   ],
   "window": {
@@ -56,7 +56,7 @@
       },
       {
         "pagePath": "pages/setting/setting",
-        "text": "工具",
+        "text": "测试功能",
         "iconPath": "images/icon/wx_app_setting.png",
         "selectedIconPath": "images/icon/wx_app_setting@HL.png"
       }

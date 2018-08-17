@@ -1,46 +1,45 @@
-.post-container{
+.mreviews-container{
     flex-direction:column;
     display:flex;
-    margin:20rpx 0 40rpx;
     background-color:#fff;
     border-bottom: 1px solid #ededed;
     border-top: 1px solid #ededed;
     padding-bottom: 5px;
 }
 
-.post-author-date{
+.mreviews-author-date{
     margin: 10rpx 0 20rpx 10px;
     display:flex;
     flex-direction: row;
     align-items: center;
 }
 
-.post-author-date image{
+.mreviews-author-date image{
     width:60rpx;
     height:60rpx;
 }
-.post-author-date text{
+.mreviews-author-date text{
     margin-left: 20px;
 }
 
-.post-image{
+.mreviews-image{
     width:100%;
     height:340rpx;
     margin-bottom: 15px;
 }
 
-.post-date{
+.mreviews-date{
     font-size:26rpx;
     margin-bottom: 10px;
 }
-.post-title{
+.mreviews-title{
     font-size:16px;
     font-weight: 600;
     color:#333;
     margin-bottom: 10px;
     margin-left: 10px;
 }
-.post-content{
+.mreviews-content{
     color:#666;
     font-size:26rpx;
     margin-bottom:20rpx;
@@ -48,7 +47,7 @@
     letter-spacing:2rpx;
     line-height: 40rpx;
 }
-.post-like{
+.mreviews-like{
     display:flex;
     flex-direction: row;
     font-size:13px;
@@ -57,12 +56,29 @@
     align-items: center;
 }
 
-.post-like image{
+.mreviews-like image{
     height:16px;
     width:16px;
     margin-right: 8px;
 }
 
-.post-like text{
+.mreviews-like text{
+    margin-right: 20px;
+}
+.mreviews-star{
+    display:flex;
+    flex-direction: row;
+    font-size:13px;
+    line-height: 16px;
+    margin-left: 10px;
+    align-items: center;
+}
+.mreviews-star image{
+    height:10px;
+    width:10px;
+    margin-right: 5px;
+}
+
+.mreviews-star text{
     margin-right: 20px;
 }

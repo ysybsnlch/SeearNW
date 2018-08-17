@@ -1,14 +1,16 @@
 var app =getApp()
-var util = require("../../../util/util.js")
+var util = require('../../../util/util.js')
+var dataUrl = ""
 Page({
   data: {
 	  reviews:[]
   },
   onLoad: function (options) {
     var id = options.id;
-    dataUrl = app.globalData.coubanBase + 
-	"v2/movie/subject/"+id+"/reviews";
+    dataUrl = app.globalData.doubanBase + 
+	"/v2/movie/subject/"+id+"/reviews";
 	this.data.requestUrl  = dataUrl;
+	console.log(dataUrl);
 	util.http(dataUrl,this.processDoubanData)
   },
 
@@ -17,24 +19,29 @@ Page({
 	  for (var idx in reviewsDouban.reviews) {
 		  var review = reviewsDouban.reviews[idx];
 	  var temp = {
-		  stars: uril.convertToStarsArrayB(review.rating.value),
+		  stars: util.convertToStarsArrayB(review.rating.value),
 		  author: review.author.name,
 		  title: review.title,
 		  summary: review.summary,
-		  id: review.id
+		  id: review.id,
+		  time: review.updated_at,
+		  useful_count:review.useful_count,
+		  avatar: review.author.avatar,
+		  useless_count:review.useless_count
 	   }
 	  reviews.push(temp)
 	 }
-	 this.setData(reviews);
+	 var totalReviews = []
+	 totalReviews = this.data.reviews.concat(reviews);
+	 console.log(totalReviews);
+	 this.setData({
+      reviews: totalReviews
+    });
 	 
   },
   
   onTapToDetail(event) {
-    var reviewId = event.currentTarget.dataset.id;
-    console.log(id);
-    wx.navigateTo({
-      url: "https://movie.douban.com/celebrity/1274388/+reviewId"+reviewId+"/"
-    })
+    console.log(event);
   },
 
   // target 和currentTarget

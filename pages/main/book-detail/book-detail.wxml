@@ -25,8 +25,8 @@
     <view class="original-title">
       <text>{{book.originalTitle}}</text>
     </view>
-    <view class="flex-row">
-      <text class="mark">评分</text>
+    <view class="flex-row" catchtap="onBreviewsTap">
+      <text class="mark" >评分</text>
       <template is="starsTpl" data="{{stars:book.stars, score:book.score}}" />
     </view>
     <view class="flex-row">
